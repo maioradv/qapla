@@ -1,0 +1,37 @@
+{
+    "name": "maioradv/qapla",
+    "type": "library",
+    "description": "Package to integrate Qapla API functionalities in your web application.",
+    "keywords": [
+        "MaiorADV",
+        "Qapla",
+        "Container"
+    ],
+    "homepage": "https://github.com/maioradv/qapla",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maddalena Vitolo",
+            "email": "maddalenavitolo@maioradv.com",
+            "homepage": "https://www.maioradv.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "php" : "~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MaiorADV\\Qapla\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

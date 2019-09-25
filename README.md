@@ -35,7 +35,7 @@ Permette di leggere lo stato di una spedizione tramite il tracking number, il ri
 Per i riferimenti del metodo, segui le specifiche reperibili qui: https://api.qapla.it/docs/#getShipment
 
 ```php
-$result = $qapla->getShipment('reference', 'it', 'consignee,history');
+$result = $qapla->getShipment('reference', '123456', 'it', 'consignee,history');
 ```
 
 ### getShipments()

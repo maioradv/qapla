@@ -306,6 +306,7 @@ class Qapla
 	/**
 	 * getShipment permette di leggere lo stato di una spedizione tramite il tracking number, il riferimento ordine o l'ID.
 	 * @param $type = può contenere reference (il riferimento ordine), id (id della spedizione) o trackingNumber
+	 * @param $type_value = è il valore da associare a type
 	 * @param $lang = La lingua dei nomi degli stati Qapla' (it, en, es), default: it.
 	 * @param $data = Il flag data specifica quali e quanti dati vogliamo ricevere, di default torna dei dati minimi sullo stato di avanzamento della spedizione
 	 * Può avere i seguenti valori:
@@ -321,7 +322,7 @@ class Qapla
 	 *
 	 * @return ordine
 	 */
-	public function getShipment($type = null, $lang = 'it', $data = null)
+	public function getShipment($type = null, $type_value = null, $lang = 'it', $data = null)
 	{
 		try{
 			$options = array(
@@ -329,8 +330,8 @@ class Qapla
 				'lang' => $lang
 			);
 			
-			if( $type != null ){
-				$options['type'] = $type;
+			if( $type != null AND $type_value != null ){
+				$options[$type] = $type_value;
 			}
 			if( $data != null ){
 				$options['data'] = $data;
